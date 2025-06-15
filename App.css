@@ -1,0 +1,410 @@
+/* Estilos Generales Mejorados */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #2d3436;
+  line-height: 1.6;
+}
+
+/* Encabezado Mejorado */
+.encabezado {
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Barra de Navegación Mejorada */
+.barra-navegacion {
+  background-color: #34495e;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.barra-navegacion button {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.8rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.barra-navegacion button:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Contenido Principal Mejorado */
+.contenido {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Contenedor principal */
+.contenedor-actores-horizontal {
+  display: flex;
+  justify-content: space-around; /* Distribuye el espacio uniformemente */
+  align-items: flex-start; /* Alinea al inicio verticalmente */
+  flex-wrap: wrap; /* Permite que se ajuste en pantallas pequeñas */
+  gap: 20px; /* Espacio entre tarjetas */
+  margin: 30px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Tarjeta de actor */
+.tarjeta-actor {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-actor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Imagen del actor */
+.imagen-actor {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+}
+
+/* Textos */
+.nombre-actor {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.obra-destacada {
+  color: #3498db;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.biografia {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 900px) {
+  .contenedor-actores-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tarjeta-actor {
+    width: 80%;
+  }
+}
+
+/* Pie de Página Mejorado */
+.pie-pagina {
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.pie-pagina p {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Títulos de Sección Mejorados */
+h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  font-size: 2rem;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db 0%, #e74c3c 100%);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Responsive Mejorado */
+@media (max-width: 768px) {
+  .contenedor-actores {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .tarjeta-actor {
+    width: 100%;
+  }
+  
+  .encabezado h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Efecto de carga suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tarjeta-actor {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.tarjeta-actor:nth-child(1) { animation-delay: 0.1s; }
+.tarjeta-actor:nth-child(2) { animation-delay: 0.2s; }
+.tarjeta-actor:nth-child(3) { animation-delay: 0.3s; }
+
+/* Estilos para la lista de logros */
+.logros-actor {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.logros-actor h4 {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.logros-actor ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.logros-actor li {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+/* Mejoras adicionales */
+.obra-destacada {
+  font-weight: 600;
+  color: #3498db;
+  margin: 10px 0;
+}
+
+.biografia {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-pelicula {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.boton-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #7f8c8d;
+  transition: color 0.3s;
+}
+
+.boton-cerrar:hover {
+  color: #e74c3c;
+}
+
+.modal-contenido {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.modal-imagen img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-texto h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  text-align: left;
+}
+
+.modal-resumen {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.modal-resumen h3 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+/* Responsive para el modal */
+@media (min-width: 768px) {
+  .modal-contenido {
+    flex-direction: row;
+  }
+  
+  .modal-imagen {
+    flex: 1;
+    margin-right: 2rem;
+  }
+  
+  .modal-texto {
+    flex: 2;
+  }
+  
+  .modal-imagen img {
+    max-height: none;
+    height: 100%;
+  }
+}
+
+/* Estilos para la página de películas */
+.pagina-peliculas {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subtitulo-peliculas {
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.contenedor-botones-peliculas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.boton-pelicula {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.boton-pelicula:hover {
+  background: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .contenedor-botones-peliculas {
+    grid-template-columns: 1fr;
+  }
+  
+  .boton-pelicula {
+    width: 100%;
+  }
+}
+/* Estilos para el pie de página */
+.pie-pagina {
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.contenido-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nombre-desarrollador {
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.info-publicidad {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
